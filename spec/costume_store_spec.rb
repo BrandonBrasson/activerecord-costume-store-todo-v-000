@@ -1,6 +1,6 @@
 require_relative 'spec_helper'
 
-describe "CostumeStore" do
+puts describe "CostumeStore" do
 
   it "has a name" do
     spirit_halloween = CostumeStore.create(
