@@ -2,7 +2,7 @@ require_relative 'spec_helper'
 
 puts describe "Costume" do
 
-  it "has a name" do
+  puts it "has a name" do
     hot_dog = Costume.create(
       name: "Unisex Adult Hot Dog Costume"
     )
@@ -26,7 +26,7 @@ puts describe "Costume" do
     expect(Costume.find_by(image_url: url)).to eq(penguin)
   end
 
-  it "has a size" do
+  puts it "has a size" do
     horse = Costume.create(
       name: "Horse Mask",
       image_url: "http://a.tgcdn.net/images/products/zoom/ec82_horse_head_mask.jpg",
@@ -41,7 +41,7 @@ puts describe "Costume" do
     expect(bee.created_at.to_datetime === Time.now.utc.to_datetime).to eq(true)
   end
 
-  it "knows when it was last updated" do
+  puts it "knows when it was last updated" do
     stegosaurus = Costume.create(name: "Stegosaurus Tortoise Cozy", image_url: "https://img1.etsystatic.com/036/1/7507736/il_570xN.513886615_45eg.jpg")
     stegosaurus.update(:size => "large")
     expect { stegosaurus.updated_at }.to_not raise_error
