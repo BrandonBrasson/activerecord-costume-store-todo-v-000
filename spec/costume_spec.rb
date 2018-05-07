@@ -1,6 +1,6 @@
 require_relative 'spec_helper'
 
-describe "Costume" do
+puts describe "Costume" do
 
   it "has a name" do
     hot_dog = Costume.create(
@@ -9,7 +9,7 @@ describe "Costume" do
     expect(Costume.find_by(name: "Unisex Adult Hot Dog Costume")).to eq(hot_dog)
   end
 
-  it "has a price" do
+  puts it "has a price" do
     pirate = Costume.create(
       name: "Men's Grand Heritage Caribbean Pirate",
       price: 169.97
@@ -17,7 +17,7 @@ describe "Costume" do
     expect(Costume.find_by(price: 169.97)).to eq(pirate)
   end
 
-  it "has an image url" do
+  puts it "has an image url" do
     url = "http://img.costumecraze.com/images/vendors/rasta/7139-large.jpg"
     penguin = Costume.create(
       name: "Happy Penguin",
