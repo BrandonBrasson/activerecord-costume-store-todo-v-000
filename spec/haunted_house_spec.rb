@@ -26,7 +26,7 @@ puts describe "HauntedHouse" do
     expect(HauntedHouse.find_by(theme: "zombies")).to eq(undead)
   end
 
-  it "has a price" do
+  puts it "has a price" do
     primative_fear = HauntedHouse.create(
       name: "Primative Fear",
       price: 25.00
@@ -34,7 +34,7 @@ puts describe "HauntedHouse" do
     expect(HauntedHouse.find_by(price: 25.00)).to eq(primative_fear)
   end
 
-  it "knows if it's family friendly" do
+  puts it "knows if it's family friendly" do
     {"Fright Fest"=>true, "13th Street Manor"=>false}.each do |name, boolean|
       HauntedHouse.create(name: name, family_friendly: boolean)
     end
@@ -42,7 +42,7 @@ puts describe "HauntedHouse" do
     expect(HauntedHouse.find_by(name: "13th Street Manor").family_friendly).to eq(false)
   end
 
-  it "has an opening date" do
+  puts it "has an opening date" do
     sept_27th = Date.new(2014,9,27)
     mckamey = HauntedHouse.create(name: "McKamey Manor", opening_date: sept_27th)
     expect(HauntedHouse.find_by(opening_date: sept_27th)).to eq(mckamey)
