@@ -1,6 +1,6 @@
 require_relative 'spec_helper'
 
-describe "HauntedHouse" do
+puts describe "HauntedHouse" do
 
   it "has a name" do
     asylum = HauntedHouse.create(
